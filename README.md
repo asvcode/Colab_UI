@@ -6,3 +6,10 @@ UI interface using fastai compatible with Google Colab
 [![Colab UI Demo](static/Colab_UI.gif)]
 
 Colab_UI is based on [Vision_UI](https://github.com/asvcode/Vision_UI) and adds a graphical user interface to [fastai](https://www.fast.ai/) allowing the user to quickly load, choose parameters, train and view results without the need to dig deep into the code.
+
+### How to Use:
+1) Clone/download this repository Colab_UI
+
+2) Click here to open in Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1O_H41XhABAEQxg_p8KZd_BCQ8pj-eJX6)
+
+3) Upload colab_ui.py into Google Colab
