@@ -161,6 +161,13 @@ def dashboard_two():
 
     button.on_click(on_button_clicked)
 
+def drive_upload():
+  from google.colab import drive
+  #print('mounting drive')
+  #drive.mount('/content/gdrive', force_remount=True)
+  drive_upload.root_dir = "/content/gdrive/My Drive/"
+  #print('drive mounted')
+
 def get_image(image_path):
     print(image_path)
 
