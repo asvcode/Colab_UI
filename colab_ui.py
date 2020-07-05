@@ -734,9 +734,11 @@ def colab_ui():
 
     t = widgets.TabBar(['Drive', 'Info', 'Data', 'Augmentation', 'Batch', 'Model', 'Metrics', 'Train'])
 
+    drive_upload()
+
 
     with t.output_to(0, select=False):
-        drive_upload()
+        #drive_upload()
         get_path()
         path_load()
 
