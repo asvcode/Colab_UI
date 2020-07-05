@@ -581,7 +581,7 @@ def model_button():
 def path_load():
 
   #path = Path(drive_upload.root_dir)
-  path = "/content/gdrive/My Drive/"
+  path = Path('/content/gdrive/My Drive/')
   file_location = str(get_path.output_variable.value)
   path_load.path_choice = path/file_location
 
