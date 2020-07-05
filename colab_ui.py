@@ -20,11 +20,8 @@ from fastai.widgets import *
 from fastai.callbacks import*
 
 def version():
-    import fastai
     import os
     import tensorflow as tf
-    import torch
-
     print ('>> Vision_UI_Colab Last Update: 07/04/2022 \n\n>> System info \n')
 
     button = widgets.Button(description='System Info')
@@ -227,7 +224,7 @@ def view_batch_folder():
             path = path_load.path_choice
             data = ImageDataBunch.from_folder(path, ds_tfms=tfms, bs=batch_val, size=image_val, test='test')
             data.normalize(stats_info())
-            data.show_batch(rows=5, figsize=(10,10))
+            data.show_batch(rows=2, figsize=(10,10))
 
     button_g.on_click(on_button_click)
 
