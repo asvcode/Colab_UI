@@ -50,7 +50,11 @@ def version():
             import torch; print(BOLD + BLUE + "torch version: " + RESET + ITALIC + str(torch.__version__))
             print(BOLD + BLUE + "\nCuda: " + RESET + ITALIC + str(torch.cuda.is_available()))
             print(BOLD + BLUE + "cuda Version: " + RESET + ITALIC + str(torch.version.cuda))
-            print(BOLD + BLUE + "GPU: " + RESET + ITALIC + str(torch.cuda.get_device_name(0)))
+            try:
+                torch.cuda.get_device_name(0)
+                print(BOLD + BLUE + "GPU: " + RESET + ITALIC + str(torch.cuda.get_device_name(0)))
+            except RuntimeError:
+                print(BOLD + BLUE + "No GPU located: ")
 
     button.on_click(on_button_clicked_info)
 
