@@ -728,15 +728,13 @@ def lr_work():
     elif training.lr.value == '1e-1':
         lr_work.info = float(0.1)
 
+drive_upload()
+
 def colab_ui():
     from google.colab import widgets
     from google.colab import output
 
     t = widgets.TabBar(['Drive', 'Info', 'Data', 'Augmentation', 'Batch', 'Model', 'Metrics', 'Train'])
-
-    drive_upload()
-
-
     with t.output_to(0, select=False):
         #drive_upload()
         get_path()
