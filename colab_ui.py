@@ -161,11 +161,11 @@ def dashboard_two():
 
     button.on_click(on_button_clicked)
 
-def drive_upload():
-  from google.colab import drive
+#def drive_upload():
+  #from google.colab import drive
   #print('mounting drive')
   #drive.mount('/content/gdrive', force_remount=True)
-  drive_upload.root_dir = "/content/gdrive/My Drive/"
+  #drive_upload.root_dir = "/content/gdrive/My Drive/"
   #print('drive mounted')
 
 def get_image(image_path):
@@ -580,7 +580,8 @@ def model_button():
 
 def path_load():
 
-  path = Path(drive_upload.root_dir)
+  #path = Path(drive_upload.root_dir)
+  path = "/content/gdrive/My Drive/"
   file_location = str(get_path.output_variable.value)
   path_load.path_choice = path/file_location
 
